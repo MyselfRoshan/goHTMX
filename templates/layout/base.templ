@@ -1,0 +1,31 @@
+package layout
+
+templ Base(title string, scripts []string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>
+				if title =="" {
+					Go with HTMX
+				} else {
+					{ title }
+				}
+			</title>
+			<!-- HTMX Script -->
+			<script src="/static/js/htmx.min.js"></script>
+			<!-- End of HTMX Script -->
+			<!-- Custom Script -->
+			if len(scripts) > 0 {
+				for _,script := range scripts {
+					<script defer src={ "/static/js/" + script + ".js" }></script>
+				}
+			}
+			<!-- End of Custom Script -->
+		</head>
+		<body>
+			{ children... }
+		</body>
+	</html>
+}

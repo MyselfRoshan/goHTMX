@@ -1,0 +1,15 @@
+package pages
+
+import "github.com/MyselfRoshan/goHTMX/templates/layout"
+
+templ Index(title string, scripts []string) {
+	@layout.Base(title, scripts) {
+		<div id="h">
+			<h1>Hello World</h1>
+			<button hx-post="/" hx-target="#h" hx-swap="outerHTML" hx-trigger="mouseenter delay:500ms" hx-indicator="#indicator">
+				Replace Me
+			</button>
+			<img id="indicator" class="htmx-indicator" src="/static/images/spinner.gif" width="30" height="30"/>
+		</div>
+	}
+}
