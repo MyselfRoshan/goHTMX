@@ -43,7 +43,7 @@ func Base(title string, scripts []string) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><!-- HTMX Script --><script src=\"/static/js/htmx.min.js\"></script><!-- End of HTMX Script --><!-- Custom Script -->")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><!-- CSS --><link rel=\"stylesheet\" href=\"/static/css/main.css\"><!-- End of CSS --><!-- HTMX Script --><script src=\"/static/js/htmx.min.js\"></script><!-- End of HTMX Script --><!-- Custom Script -->")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

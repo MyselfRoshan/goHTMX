@@ -10,6 +10,8 @@ func HandleGetIndex(w http.ResponseWriter, r *http.Request) {
 	pages.Index("This is index page", nil).Render(r.Context(), w)
 }
 
-func HandlePostIndex(w http.ResponseWriter, r *http.Request) {
-	pages.NewIndex("This is new site").Render(r.Context(), w)
-}
+// func HandlePostIndex(w http.ResponseWriter, r *http.Request) {
+// 	a := r.FormValue("new")
+
+// 	pages.NewIndex(a).Render(r.Context(), w)
+// }

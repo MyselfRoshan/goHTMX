@@ -30,7 +30,8 @@ func Routes() http.Handler {
 	router.Handle("/static/*", http.StripPrefix("/static", fs))
 
 	router.Get("/", handlers.HandleGetIndex)
-	router.Post("/", handlers.HandlePostIndex)
+
+	router.Get("/todos", handlers.HandleGetTodos)
 
 	return router
 }

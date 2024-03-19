@@ -1,0 +1,21 @@
+package pages
+
+import "github.com/MyselfRoshan/goHTMX/templates/layout"
+
+templ Todos(title string) {
+	@layout.Base(title, nil) {
+		// <div id="parent">
+		<h1>
+			Todo Items
+		</h1>
+		// 	<input type="text"/>
+		// 	<button hx-get="/" hx-target="#parent" hx-trigger="mouseenter">This is our context</button>
+		// </div>
+		<form hx-post="/todo" class="form">
+			<input type="text" class="todoInput" name="todoItem"/>
+			<button class="addBtn">
+				<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 112v288M400 256H112"></path></svg>
+			</button>
+		</form>
+	}
+}

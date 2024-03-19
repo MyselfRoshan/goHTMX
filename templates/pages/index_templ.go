@@ -31,7 +31,7 @@ func Index(title string, scripts []string) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"h\"><h1>Hello World</h1><button hx-post=\"/\" hx-target=\"#h\" hx-swap=\"outerHTML\" hx-trigger=\"mouseenter delay:500ms\" hx-indicator=\"#indicator\">Replace Me\r</button> <img id=\"indicator\" class=\"htmx-indicator\" src=\"/static/images/spinner.gif\" width=\"30\" height=\"30\"></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div className=\"landing-wrapper\"><h1>This a Landing Page</h1></div>       ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

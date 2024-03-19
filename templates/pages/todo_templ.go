@@ -12,7 +12,7 @@ import "bytes"
 
 import "github.com/MyselfRoshan/goHTMX/templates/layout"
 
-func NewIndex(title string) templ.Component {
+func Todos(title string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -31,7 +31,7 @@ func NewIndex(title string) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"parent\"><h1>This is completly new content\r</h1><input type=\"text\"> <button hx-get=\"/\" hx-target=\"#parent\" hx-trigger=\"mouseenter\">This is our context</button></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <h1>Todo Items\r</h1>   <form hx-post=\"/todo\" class=\"form\"><input type=\"text\" class=\"todoInput\" name=\"todoItem\"> <button class=\"addBtn\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ionicon\" viewBox=\"0 0 512 512\"><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"32\" d=\"M256 112v288M400 256H112\"></path></svg></button></form>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
